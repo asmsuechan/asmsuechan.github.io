@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <head>
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdn.rawgit.com/asmsuechan/jquery_push_notification/0177d8651d87cb3fdb591f81822fd200793b5a4f/push_notification.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <title>jquery_push_notification</title>
 </head>
 <body>
-  <button onclick="simpleNotify()">simpleNotify</button>
+  <div class="col-xs-3">
+    <button onclick="simpleNotify()">simpleNotify</button>
+  </div>
+  <div class="col-xs-3">
+    <button onclick="clickalertNotify()">simpleNotify</button>
+  </div>
+  <div class="col-xs-3">
+    <button onclick="clickredirectNotify()">simpleNotify</button>
+  </div>
+
   <script>
     function simpleNotify(){
       $.notify("simple notify");
+    }
+    function clickalertNotify(){
+      $.notify("click alert notify").click(function(){
+        alert("clicked!");
+      });
+    }
+    function clickredirectNotify(){
+      $.notify("click redirect notify").click(function(){
+        location.href = "https://github.com/asmsuechan/jquery_push_notification";
+      });
     }
   </script>
 </body>
