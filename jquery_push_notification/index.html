@@ -3,18 +3,44 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdn.rawgit.com/asmsuechan/jquery_push_notification/0177d8651d87cb3fdb591f81822fd200793b5a4f/push_notification.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/prettify.js"></script>
+  <link href="css/prettify.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <title>jquery_push_notification</title>
 </head>
 <body>
-  <div class="col-xs-3">
-    <button type="button" class="btn btn-default" onclick="simpleNotify()">simpleNotify</button>
+  <div class="container">
+  <div class="row">
+    <div class="well text-center">
+      Notification demos!
+    </div>
   </div>
-  <div class="col-xs-3">
-    <button type="button" class="btn btn-default" onclick="clickalertNotify()">simpleNotify</button>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>simpleNotify()</h2>
+      <pre class="prettyprint linenums">
+$.notify("simple notify");</pre>
+      <button type="button" class="btn btn-default" onclick="simpleNotify()">simpleNotify</button>
+    </div>
+
+    <div class="col-md-4">
+      <h2>clickalertNotify()</h2>
+      <pre class="prettyprint linenums">
+$.notify("click alert notify").click(function(){
+  alert("clicked!");
+});</pre>
+      <button type="button" class="btn btn-default" onclick="clickalertNotify()">clickalertNotify</button>
+    </div>
+
+    <div class="col-md-4">
+      <h2>clickredirectNotify()</h2>
+      <pre class="prettyprint linenums">
+$.notify("click redirect notify").click(function(){
+  location.href = "https://github.com/asmsuechan/jquery_push_notification";
+});</pre>
+      <button type="button" class="btn btn-default" onclick="clickredirectNotify()">clickredirectNotify</button>
+    </div>
   </div>
-  <div class="col-xs-3">
-    <button type="button" class="btn btn-default" onclick="clickredirectNotify()">simpleNotify</button>
   </div>
 
   <script>
@@ -32,5 +58,6 @@
       });
     }
   </script>
+  <script>prettyPrint();</script>
 </body>
 </html>
