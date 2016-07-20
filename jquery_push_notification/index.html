@@ -40,6 +40,14 @@ $.notify("click redirect notify").click(function(){
 });</pre>
       <button type="button" class="btn btn-default" onclick="clickredirectNotify()">clickredirectNotify</button>
     </div>
+
+    <div class="col-md-4">
+      <h2>picNotify()</h2>
+      <pre class="prettyprint linenums">
+$.notify("notify with picture", { url: "https://avatars3.githubusercontent.com/u/11307908?v=3&s=460" });</pre>
+      <button type="button" class="btn btn-default" onclick="picNotify()">picNotify</button>
+    </div>
+
   </div>
   </div>
 
@@ -55,6 +63,11 @@ $.notify("click redirect notify").click(function(){
     function clickredirectNotify(){
       $.notify("click redirect notify").click(function(){
         location.href = "https://github.com/asmsuechan/jquery_push_notification";
+      });
+    }
+    function picNotify(){
+      $.notify("asdf", {
+        icon: "https://avatars3.githubusercontent.com/u/11307908?v=3&s=460"
       });
     }
   </script>
