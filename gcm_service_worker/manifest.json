@@ -8,6 +8,6 @@
   }],
   "start_url": "/gcm_service_worker/index.html",
   "display": "standalone",
-  "gcm_sender_id": "professor-1349",
+  "gcm_sender_id": "492067507259",
   "gcm_user_visible_only": true
 }
