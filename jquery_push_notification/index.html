@@ -54,6 +54,16 @@ $.notify("notify with picture", { url: "https://avatars3.githubusercontent.com/u
 $.notify("set title option", { title: "This is title!" });</pre>
       <button type="button" class="btn btn-default" onclick="titleNotify()">set_title</button>
     </div>
+
+    <div class="col-md-4">
+      <h2>close_alert</h2>
+      <pre class="prettyprint linenums">
+$.notify("close_alert").close(function(){
+  alert("closed!");
+  });</pre>
+      <button type="button" class="btn btn-default" onclick="closeAlert()">close_alert</button>
+    </div>
+
   </div>
   </div>
 
@@ -79,6 +89,11 @@ $.notify("set title option", { title: "This is title!" });</pre>
     function titleNotify(){
       $.notify("set title option", {
         title: "This is title!"
+      });
+    }
+    function closeAlert(){
+      $.notify("close alert").close(function(){
+        alert("closed!");
       });
     }
   </script>
